@@ -165,7 +165,7 @@ class Parser:
 
         if keyword == "PROC":
             self.eat(TokenType.KEYWORD, "PROC")
-            proc_name = self.eat(TokenType.IDENTIFIER).value.upper()
+            proc_name = self.eat(TokenType.KEYWORD).value.upper()
 
             if proc_name == "SORT":
                 return self.parse_proc_sort()
